@@ -17,6 +17,7 @@ body {
     min-height: 100vh;
 }
 
+/* Main card */
 .container {
     width: 90%;
     max-width: 500px;
@@ -29,6 +30,7 @@ body {
     box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
 
+/* Text */
 h1 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -39,6 +41,7 @@ p {
     line-height: 1.5;
 }
 
+/* Link box */
 .link-box {
     background: rgba(0,0,0,0.4);
     padding: 10px;
@@ -48,6 +51,7 @@ p {
     font-size: 13px;
 }
 
+/* Buttons */
 button {
     padding: 12px 15px;
     border: none;
@@ -67,6 +71,7 @@ button {
     color: white;
 }
 
+/* Footer */
 .footer {
     font-size: 12px;
     opacity: 0.7;
@@ -78,11 +83,11 @@ button {
 <body>
 
 <div class="container">
-    <h1>Save on Mobile Bills in Canada</h1>
+    <h1>🇨🇦 Save on Mobile Bills in Canada</h1>
 
     <p>
         Join <b>Public Mobile</b> and get affordable plans on the Telus network.  
-        No contracts, no surprises.
+        No contracts, no hidden fees — simple and cheap mobile service in Canada.
     </p>
 
     <div class="link-box" id="refLink">
@@ -93,7 +98,7 @@ button {
     <button class="open-btn" onclick="openLink()">🚀 Open Offer</button>
 
     <div class="footer">
-        Simple referral page for sharing across Canada
+        Share this page with friends in Canada 🇨🇦
     </div>
 </div>
 
@@ -101,358 +106,12 @@ button {
 function copyLink() {
     const text = document.getElementById("refLink").innerText;
     navigator.clipboard.writeText(text);
-    alert("Link copied!");
+    alert("Link copied to clipboard!");
 }
 
 function openLink() {
     window.open("https://inviteyourfriends.github.io/publicmobile/", "_blank");
 }
-</script>
-
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Public Mobile Referral Code - MNT9DL</title>
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-body{
-    background:linear-gradient(
-        135deg,
-        #182848,
-        #4b6cb7
-    );
-    min-height:100vh;
-    color:white;
-    overflow-x:hidden;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    padding:50px 20px;
-}
-
-.hero{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.hero h1{
-    font-size:clamp(3rem,7vw,5rem);
-    margin-bottom:20px;
-    font-weight:800;
-}
-
-.hero span{
-    background:linear-gradient(
-        90deg,
-        #ff8a00,
-        #e52e71,
-        #00dbde
-    );
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-
-.hero p{
-    max-width:850px;
-    margin:auto;
-    font-size:1.25rem;
-    color:#d8e0ff;
-}
-
-/* COLORFUL BORDER */
-
-.border-wrap{
-    background:linear-gradient(
-        270deg,
-        #ff8a00,
-        #e52e71,
-        #00dbde,
-        #a855f7,
-        #ff8a00
-    );
-    background-size:400% 400%;
-    animation:borderFlow 8s ease infinite;
-    padding:4px;
-    border-radius:30px;
-    margin-bottom:70px;
-}
-
-@keyframes borderFlow{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-.card{
-    background:rgba(255,255,255,0.12);
-    backdrop-filter:blur(18px);
-    border-radius:26px;
-    padding:50px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:30px;
-}
-
-.label{
-    font-size:1.8rem;
-    margin-bottom:15px;
-}
-
-.code{
-    font-size:clamp(4rem,9vw,7rem);
-    font-weight:900;
-    letter-spacing:5px;
-    color:#fff;
-    text-shadow:0 0 20px rgba(255,255,255,.3);
-}
-
-.benefits{
-    margin-top:25px;
-}
-
-.benefits div{
-    margin:10px 0;
-    font-size:1.1rem;
-}
-
-.copy-btn{
-    border:none;
-    padding:22px 40px;
-    border-radius:15px;
-    cursor:pointer;
-    font-size:1.2rem;
-    font-weight:700;
-    color:white;
-    background:linear-gradient(
-        90deg,
-        #ff8a00,
-        #e52e71
-    );
-    transition:.3s;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-}
-
-.copy-btn:hover{
-    transform:translateY(-4px);
-}
-
-.section-title{
-    text-align:center;
-    font-size:2.8rem;
-    margin-bottom:40px;
-}
-
-.features{
-    display:flex;
-    flex-wrap:wrap;
-    gap:25px;
-    justify-content:center;
-}
-
-.feature{
-    width:320px;
-    background:rgba(255,255,255,.12);
-    backdrop-filter:blur(15px);
-    border-radius:20px;
-    padding:30px;
-    text-align:center;
-}
-
-.feature h3{
-    margin-bottom:15px;
-    font-size:1.5rem;
-}
-
-.feature p{
-    color:#dce4ff;
-}
-
-.cta{
-    margin-top:70px;
-    text-align:center;
-    background:rgba(255,255,255,.1);
-    backdrop-filter:blur(12px);
-    border-radius:25px;
-    padding:50px;
-}
-
-.cta h2{
-    font-size:2.5rem;
-    margin-bottom:15px;
-}
-
-.big-code{
-    font-size:4rem;
-    margin-top:20px;
-    font-weight:900;
-    color:#ffd166;
-}
-
-.footer{
-    margin-top:70px;
-    text-align:center;
-    font-size:1.3rem;
-    color:#dbe5ff;
-}
-
-.footer strong{
-    color:#ffd166;
-}
-
-@media(max-width:768px){
-
-.card{
-    text-align:center;
-    justify-content:center;
-}
-
-.copy-btn{
-    width:100%;
-}
-
-.hero h1{
-    font-size:3rem;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<div class="hero">
-    <h1>
-        Share The Savings.
-        <span>Earn Rewards.</span>
-    </h1>
-
-    <p>
-        Love Public Mobile? Help your friends save on their mobile plans and
-        earn referral rewards at the same time. Use your referral code when
-        they sign up and enjoy the benefits together.
-    </p>
-</div>
-
-<div class="border-wrap">
-
-<div class="card">
-
-<div>
-    <div class="label">
-        🎁 Your Public Mobile Referral Code
-    </div>
-
-    <div class="code" id="referralCode">
-        MNT9DL
-    </div>
-
-    <div class="benefits">
-        <div>✅ Friend receives a welcome bonus</div>
-        <div>✅ Earn referral rewards</div>
-        <div>✅ Unlimited referrals</div>
-        <div>✅ Share with family and friends</div>
-    </div>
-</div>
-
-<button id="copyBtn" class="copy-btn" onclick="copyCode()">
-    📋 Copy Code
-</button>
-
-</div>
-
-</div>
-
-<h2 class="section-title">
-    Why Canadians Choose Public Mobile
-</h2>
-
-<div class="features">
-
-<div class="feature">
-    <h3>💰 Affordable Plans</h3>
-    <p>
-        Flexible mobile plans designed to save money every month.
-    </p>
-</div>
-
-<div class="feature">
-    <h3>📶 Reliable Coverage</h3>
-    <p>
-        Enjoy dependable coverage across Canada.
-    </p>
-</div>
-
-<div class="feature">
-    <h3>🎁 Easy Rewards</h3>
-    <p>
-        Refer friends and earn rewards while helping them save.
-    </p>
-</div>
-
-</div>
-
-<div class="cta">
-
-<h2>Ready To Save?</h2>
-
-<p>
-    Join Public Mobile today and use the referral code below during activation.
-</p>
-
-<div class="big-code">
-    MNT9DL
-</div>
-
-</div>
-
-<div class="footer">
-    Start saving today with Public Mobile.
-    Use referral code <strong>MNT9DL</strong> during activation and enjoy exclusive rewards.
-</div>
-
-</div>
-
-<script>
-
-function copyCode(){
-
-    const code = "MNT9DL";
-
-    navigator.clipboard.writeText(code);
-
-    const btn = document.getElementById("copyBtn");
-
-    btn.innerHTML="✅ Copied!";
-
-    setTimeout(function(){
-        btn.innerHTML="📋 Copy Code";
-    },2000);
-}
-
 </script>
 
 </body>

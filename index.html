@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title> Save on Mobile in Canada </title>
+<title>Save on Mobile in Canada</title>
 
 <style>
 body {
@@ -15,19 +15,37 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 15px;
 }
 
 /* Main card */
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 500px;
     background: rgba(255,255,255,0.08);
-    border: 3px solid;
-    border-image: linear-gradient(45deg, #00ffcc, #ff00cc, #00ffcc) 1;
     border-radius: 20px;
     padding: 25px;
     text-align: center;
-    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+
+    /* glowing full border effect */
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #00ffcc, #ff00cc, #00ffcc);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 /* Text */
@@ -44,7 +62,7 @@ p {
 /* Link box */
 .link-box {
     background: rgba(0,0,0,0.4);
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
     margin: 15px 0;
     word-break: break-all;
@@ -59,6 +77,7 @@ button {
     margin: 8px;
     cursor: pointer;
     font-weight: bold;
+    width: 45%;
 }
 
 .copy-btn {
@@ -77,13 +96,21 @@ button {
     opacity: 0.7;
     margin-top: 15px;
 }
+
+/* mobile fix */
+@media (max-width: 480px) {
+    button {
+        width: 100%;
+        display: block;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <div class="container">
-    <h1>Save on Mobile Bills in Canada</h1>
+    <h1>🇨🇦 Save on Mobile Bills in Canada</h1>
 
     <p>
         Join <b>Public Mobile</b> and get affordable 5G plans on the Telus network.  
@@ -104,9 +131,21 @@ button {
 
 <script>
 function copyLink() {
-    const text = document.getElementById("refLink").innerText;
-    navigator.clipboard.writeText(text);
-    alert("Link copied to clipboard!");
+    const text = document.getElementById("refLink").innerText.trim();
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text);
+        alert("Link copied!");
+    } else {
+        // fallback for older browsers
+        const temp = document.createElement("textarea");
+        temp.value = text;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+        alert("Link copied!");
+    }
 }
 
 function openLink() {

@@ -1,6 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Save on Mobile in Canada 🇨🇦</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255,255,255,0.08);
+    border: 3px solid;
+    border-image: linear-gradient(45deg, #00ffcc, #ff00cc, #00ffcc) 1;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.link-box {
+    background: rgba(0,0,0,0.4);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 15px 0;
+    word-break: break-all;
+    font-size: 13px;
+}
+
+button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    margin: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #00ffcc;
+    color: #000;
+}
+
+.open-btn {
+    background: #ff00cc;
+    color: white;
+}
+
+.footer {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Save on Mobile Bills in Canada</h1>
+
+    <p>
+        Join <b>Public Mobile</b> and get affordable plans on the Telus network.  
+        No contracts, no surprises.
+    </p>
+
+    <div class="link-box" id="refLink">
+        https://inviteyourfriends.github.io/publicmobile/
+    </div>
+
+    <button class="copy-btn" onclick="copyLink()">📋 Copy Link</button>
+    <button class="open-btn" onclick="openLink()">🚀 Open Offer</button>
+
+    <div class="footer">
+        Simple referral page for sharing across Canada
+    </div>
+</div>
+
+<script>
+function copyLink() {
+    const text = document.getElementById("refLink").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Link copied!");
+}
+
+function openLink() {
+    window.open("https://inviteyourfriends.github.io/publicmobile/", "_blank");
+}
+</script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 

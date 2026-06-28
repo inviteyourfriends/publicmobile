@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer a Friend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="card">
+    <div class="text-section">
+        <p class="label">Refer-a-friend-code:</p>
+        <h1>MNT9DL</h1>
+    </div>
+
+    <button class="share-btn" onclick="shareCode()">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+            <path d="M12 16V3M12 3L7 8M12 3L17 8M5 15V20H19V15"
+                stroke="#F3A18D"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
+    </button>
+</div>
+
+<script>
+function shareCode() {
+    const code = "MNT9DL";
+
+    if (navigator.share) {
+        navigator.share({
+            title: "Referral Code",
+            text: `Use my referral code: ${code}`
+        });
+    } else {
+        navigator.clipboard.writeText(code);
+        alert("Referral code copied!");
+    }
+}
+</script>
+
+</body>
+</html>

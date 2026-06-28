@@ -1,43 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refer a Friend</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Public Mobile Referral Code</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#2f3653;
+    color:white;
+    line-height:1.6;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.hero{
+    text-align:center;
+    padding:40px 0 60px;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,4.5rem);
+    margin-bottom:20px;
+}
+
+.highlight{
+    color:#f3a18d;
+}
+
+.hero p{
+    max-width:850px;
+    margin:auto;
+    font-size:1.2rem;
+    color:#d9dcec;
+}
+
+.card{
+    background:#f2eadb;
+    color:#39405f;
+    border-radius:20px;
+    padding:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.label{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.code{
+    font-size:clamp(3rem,8vw,6rem);
+    font-weight:900;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.benefit{
+    font-size:1.1rem;
+    margin-top:10px;
+}
+
+.copy-btn{
+    background:#39405f;
+    color:white;
+    border:none;
+    padding:20px 40px;
+    border-radius:15px;
+    font-size:1.2rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.copy-btn:hover{
+    transform:translateY(-3px);
+}
+
+.section-title{
+    text-align:center;
+    margin:70px 0 40px;
+    font-size:2.5rem;
+}
+
+.features{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.feature{
+    background:#f2eadb;
+    color:#39405f;
+    border-radius:16px;
+    padding:30px;
+    width:320px;
+    text-align:center;
+}
+
+.feature h3{
+    margin-bottom:15px;
+}
+
+.cta{
+    margin-top:70px;
+    text-align:center;
+    background:rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:40px;
+}
+
+.cta h2{
+    margin-bottom:15px;
+}
+
+.footer-message{
+    text-align:center;
+    padding:60px 20px;
+    font-size:1.4rem;
+}
+
+.footer-message strong{
+    color:#f3a18d;
+}
+
+@media(max-width:768px){
+
+    .card{
+        text-align:center;
+        justify-content:center;
+    }
+
+    .copy-btn{
+        width:100%;
+    }
+}
+</style>
 </head>
 <body>
 
-<div class="card">
-    <div class="text-section">
-        <p class="label">Refer-a-friend-code:</p>
-        <h1>MNT9DL</h1>
+<div class="container">
+
+    <section class="hero">
+        <h1>
+            Share the Savings.
+            <span class="highlight">Earn Rewards.</span>
+        </h1>
+
+        <p>
+            Love your Public Mobile experience? Invite your friends and family to join.
+            When they activate using your referral code, they receive a welcome bonus
+            and you earn rewards too. It's an easy way to save more every month while
+            helping others enjoy affordable wireless service across Canada.
+        </p>
+    </section>
+
+    <div class="card">
+
+        <div>
+            <div class="label">Your Public Mobile Referral Code</div>
+
+            <div class="code" id="referralCode">
+                MNT9DL
+            </div>
+
+            <div class="benefit">✅ Your friend receives a welcome bonus</div>
+            <div class="benefit">✅ You earn referral rewards</div>
+            <div class="benefit">✅ Share with friends and family anytime</div>
+        </div>
+
+        <button id="copyBtn" class="copy-btn" onclick="copyCode()">
+            Copy Code
+        </button>
+
     </div>
 
-    <button class="share-btn" onclick="shareCode()">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-            <path d="M12 16V3M12 3L7 8M12 3L17 8M5 15V20H19V15"
-                stroke="#F3A18D"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"/>
-        </svg>
-    </button>
+    <h2 class="section-title">Why Join Public Mobile?</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <h3>💰 Affordable Plans</h3>
+            <p>
+                Enjoy competitive pricing and flexible mobile plans designed
+                to help Canadians save every month.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h3>📶 Reliable Coverage</h3>
+            <p>
+                Stay connected with dependable nationwide coverage across Canada.
+            </p>
+        </div>
+
+        <div class="feature">
+            <h3>🎁 Referral Rewards</h3>
+            <p>
+                Earn rewards when your friends join using your referral code.
+                Everybody wins.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="cta">
+        <h2>Ready to Switch?</h2>
+
+        <p>
+            Join thousands of Canadians who are saving money on their mobile service.
+            Use the referral code below during activation.
+        </p>
+
+        <h1 style="margin-top:20px;color:#f3a18d;">
+            MNT9DL
+        </h1>
+    </div>
+
+    <div class="footer-message">
+        Start saving today with Public Mobile.
+        Use referral code <strong>MNT9DL</strong> when activating your account and enjoy exclusive rewards.
+    </div>
+
 </div>
 
 <script>
-function shareCode() {
-    const code = "MNT9DL";
+function copyCode() {
 
-    if (navigator.share) {
-        navigator.share({
-            title: "Referral Code",
-            text: `Use my referral code: ${code}`
-        });
-    } else {
-        navigator.clipboard.writeText(code);
-        alert("Referral code copied!");
-    }
+    const code = document.getElementById("referralCode").innerText;
+
+    navigator.clipboard.writeText(code);
+
+    const btn = document.getElementById("copyBtn");
+
+    btn.innerHTML = "Copied ✓";
+
+    setTimeout(() => {
+        btn.innerHTML = "Copy Code";
+    }, 2000);
 }
 </script>
 

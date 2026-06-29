@@ -18,7 +18,7 @@ body {
     padding: 15px;
 }
 
-/* Main card */
+/* Card */
 .container {
     width: 100%;
     max-width: 500px;
@@ -26,13 +26,10 @@ body {
     border-radius: 20px;
     padding: 25px;
     text-align: center;
-
-    /* glowing full border effect */
-    border: 2px solid transparent;
-    background-clip: padding-box;
     position: relative;
 }
 
+/* Gradient border */
 .container::before {
     content: "";
     position: absolute;
@@ -40,15 +37,12 @@ body {
     padding: 2px;
     border-radius: 20px;
     background: linear-gradient(45deg, #00ffcc, #ff00cc, #00ffcc);
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
 }
 
-/* Text */
 h1 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -59,7 +53,6 @@ p {
     line-height: 1.5;
 }
 
-/* Link box */
 .link-box {
     background: rgba(0,0,0,0.4);
     padding: 12px;
@@ -69,7 +62,6 @@ p {
     font-size: 13px;
 }
 
-/* Buttons */
 button {
     padding: 12px 15px;
     border: none;
@@ -90,14 +82,13 @@ button {
     color: white;
 }
 
-/* Footer */
 .footer {
     font-size: 12px;
     opacity: 0.7;
     margin-top: 15px;
 }
 
-/* mobile fix */
+/* mobile */
 @media (max-width: 480px) {
     button {
         width: 100%;
@@ -109,8 +100,15 @@ button {
 
 <body>
 
-<div class="container">
-    <h1>🇨🇦 Save on Mobile Bills in Canada</h1>
+<div class="flag">🇨🇦</div>
+    <img src="canada-flag.jpg" class="flag-img" alt="Canada Flag">
+    .flag-img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+    <h1>Save on Mobile Bills in Canada</h1>
 
     <p>
         Join <b>Public Mobile</b> and get affordable 5G plans on the Telus network.  
@@ -135,21 +133,28 @@ function copyLink() {
 
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text);
-        alert("Link copied!");
     } else {
-        // fallback for older browsers
         const temp = document.createElement("textarea");
         temp.value = text;
         document.body.appendChild(temp);
         temp.select();
         document.execCommand("copy");
         document.body.removeChild(temp);
-        alert("Link copied!");
     }
+
+    alert("Link copied!");
 }
 
 function openLink() {
-    window.open("https://inviteyourfriends.github.io/publicmobile/", "_blank");
+    const url = "https://inviteyourfriends.github.io/publicmobile/";
+
+    // best reliable method
+    const newTab = window.open(url, "_blank", "noopener,noreferrer");
+
+    // fallback if blocked
+    if (!newTab) {
+        window.location.href = url;
+    }
 }
 </script>
 
